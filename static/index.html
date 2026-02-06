@@ -3,7 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>TriSolve</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="preload" href="/static/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/static/style.css"></noscript>
+  <style>
+    body { visibility: hidden; }
+  </style>
 </head>
 <body>
   <h1>🧠 TriSolve</h1>
@@ -11,7 +16,7 @@
   <div id="game">
     <p id="task"></p>
     <form onsubmit="submitAnswer(); return false;">
-      <input id="answer" type="number" placeholder="Your answer" autocomplete="off" />
+      <input id="answer" type="text" placeholder="Your answer" autocomplete="off" inputmode="numeric" pattern="[0-9]*" />
       <button type="submit">Submit</button>
     </form>
     <p id="score"></p>

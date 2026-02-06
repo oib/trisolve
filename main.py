@@ -23,9 +23,6 @@ def challenge(username: str):
 
 @app.post("/api/submit")
 def submit(username: str = Form(...), answer: str = Form(...)):
-    print("[DEBUG] submit() called")
-    print("[DEBUG] username:", username)
-    print("[DEBUG] answer:", answer)
     try:
         parsed = int(answer)
     except ValueError:

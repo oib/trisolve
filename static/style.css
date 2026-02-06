@@ -9,12 +9,16 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #1a202c;
+  color: #e2e8f0;
 }
 
 h1 {
   margin-bottom: 1.5rem;
   text-align: center;
+  color: #63b3ed;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 #game {
@@ -24,23 +28,85 @@ h1 {
   gap: 1rem;
   width: 100%;
   max-width: 400px;
+  background-color: #2d3748;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 input, button {
-  padding: 0.5rem;
-  font-size: 1rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid #4a5568;
+  background-color: #4a5568;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus, button:hover {
+  outline: none;
+  border-color: #63b3ed;
+  background-color: #4a5568;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(99, 179, 237, 0.3);
+}
+
+button {
+  background-color: #63b3ed;
+  color: #1a202c;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4299e1;
 }
 
 #task, #feedback, #score {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
+  color: #e2e8f0;
+}
+
+#task {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #90cdf4;
+  margin: 1rem 0;
 }
 
 #feedback {
   margin-top: 0.5em;
   font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#feedback:contains("✅") {
+  color: #68d391;
+}
+
+#feedback:contains("❌") {
+  color: #fc8181;
+}
+
+/* Fun animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+#game {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+#game:hover {
+  animation-play-state: paused;
 }
 

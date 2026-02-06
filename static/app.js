@@ -2,10 +2,13 @@ const username = "guest";
 let currentScore = parseInt(localStorage.getItem("trisolve_score"), 10) || 0;
 
 window.onload = () => {
+  // Show the page after CSS is loaded
+  document.body.style.visibility = 'visible';
   loadHighscore();
   getChallenge();
   updateScoreDisplay();
-  focusAnswerField();
+  // Small delay to ensure focus works after page is visible
+  setTimeout(focusAnswerField, 100);
 }
 
 function focusAnswerField() {
