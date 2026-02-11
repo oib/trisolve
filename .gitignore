@@ -5,6 +5,8 @@ __pycache__/
 # Virtuelle Umgebungen
 .venv/
 venv/
+env/
+ENV/
 
 # Betriebssystem-Dateien
 .DS_Store
@@ -19,3 +21,46 @@ Thumbs.db
 # IDEs und Editoren
 .vscode/
 .idea/
+.windsurf/
+.snapshots/
+
+# Environment und Config
+.env
+.env.local
+.env.*.local
+config.ini
+settings.ini
+
+# Node modules (falls verwendet)
+node_modules/
+
+# Test und Coverage
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Build Ordner
+build/
+dist/
+
+# Cache Ordner
+.cache/
+*.cache
+
+# Temporäre Dateien
+*.temp
+*.tempfile
+
+# Datenbank Dateien
+*.db
+*.sqlite
+*.sqlite3
+
+# SSH Keys und Zertifikate
+*.pem
+*.key
+*.crt
+
+# Backup Dateien
+*.backup
+*.bak2
