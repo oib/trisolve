@@ -11,17 +11,19 @@
   </style>
 </head>
 <body>
-  <h1>🧠 TriSolve</h1>
+  <main>
+    <h1>🧠 TriSolve</h1>
 
-  <div id="game">
-    <p id="task"></p>
-    <form onsubmit="submitAnswer(); return false;">
-      <input id="answer" type="text" placeholder="Your answer" autocomplete="off" inputmode="numeric" pattern="[0-9]*" />
-      <button type="submit">Submit</button>
-    </form>
-    <p id="score"></p>
-    <p id="feedback"></p>
-  </div>
+    <div id="game">
+      <p id="task"></p>
+      <form onsubmit="submitAnswer(); return false;">
+        <input id="answer" type="text" placeholder="Your answer" autocomplete="off" inputmode="numeric" pattern="[0-9]*" />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="score"></p>
+      <p id="feedback"></p>
+    </div>
+  </main>
 
   <footer id="footer">
     <a href="https://github.com/oib/trisolve" target="_blank" rel="noopener noreferrer" class="footer-link">
